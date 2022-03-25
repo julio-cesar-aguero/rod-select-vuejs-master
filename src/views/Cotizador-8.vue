@@ -38,7 +38,7 @@
             </li>
             <li>
               Más del 60% de los consumidores agradecen recibir un obsequio
-              funcional para su uso diario
+              funcional para su uso diario.
             </li>
           </ul>
         </div>
