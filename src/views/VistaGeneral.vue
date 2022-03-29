@@ -387,6 +387,12 @@ export default {
     
   },
   mounted() {
+    if(localStorage.getItem('LoggedEmail')){
+      localStorage.removeItem('LoggedEmail');
+      //alert("con email")
+    }else{
+      //alert("sin email")
+    }
   },
 };
 </script>

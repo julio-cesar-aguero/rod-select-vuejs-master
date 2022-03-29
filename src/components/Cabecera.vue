@@ -115,14 +115,14 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   }
 header {
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   width: 100%;
-  height: 100px;
+  height: 90px;
   position: fixed;
   top: 0;
   right: 0;
@@ -132,6 +132,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #f0f0f2;
+  
   color: aliceblue;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -147,6 +148,8 @@ h2{
   justify-content: space-around;
   margin: auto;
   padding: 0 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .container__logo {
   display: flex;
@@ -181,13 +184,13 @@ nav ul,.menu-show {
 }
 nav ul li {
   font-size: 20px;
-  margin: 0px 10px;
+  margin: 0px 5px;
   list-style: none;
 }
 
 .link {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 21px;
   color: black;
   transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
 }
@@ -204,7 +207,7 @@ nav ul li {
 @media (max-width: 1200px) {
   header {
     flex-direction: column;
-    height: 150px;
+    height: 142px;
   }
   
 }
@@ -212,7 +215,7 @@ nav ul li {
   nav ul{
     margin: 0 auto;
     width: 70%;
-    padding-top: 0.5em;
+    padding-top: 0.7em;
   }
 }
 @media (max-width: 739px) {
@@ -229,9 +232,10 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5em;
   }
   nav ul,.menu-show{
-    padding-top: 0.2em;
+    padding-top: 0.1em;
     flex-direction: column;
   }
   .header-show {
@@ -252,4 +256,15 @@ nav ul li {
     font-size: 0.9em;
   }
 }
+@media (max-width: 430px) {
+  #logorod{
+    transform: scale(0.7);
+  }
+  .header-hide {
+    height: 60px;
+  }
+  .link {
+    font-size: 0.7em;
+  }
+  }
 </style>

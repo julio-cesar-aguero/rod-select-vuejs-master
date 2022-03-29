@@ -13,10 +13,12 @@ function guardMyroute(to, from, next)
  console.log("chipi")
 //this is just an example. You will have to find a better or 
 // centralised way to handle you localstorage data handling 
-if(localStorage.getItem('LoggedMail'))
+if(localStorage.getItem('LoggedEmail')){
   isAuthenticated = true;
- else
-  isAuthenticated= false; if(isAuthenticated) 
+  //alert("Si")
+}else{
+ //alert("no");
+  isAuthenticated= false;} if(isAuthenticated) 
  {
   next(); // allow to enter route
  } 
@@ -25,6 +27,7 @@ if(localStorage.getItem('LoggedMail'))
   next('/'); // go to '/login';
  }
 }
+
 
 const routes = [
   {
@@ -40,32 +43,37 @@ const routes = [
   {
     path: '/cotizador-2',
     name: 'Cotizador-2',
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-2.vue')
   },
   {
     path: '/cotizador-3',
     name: 'Cotizador-3',
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-3.vue')
   },
   {
     path: '/cotizador-4',
     name: 'Cotizador-4',
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-4.vue')
   },
   {
     path: '/cotizador-5',
     name: 'Cotizador-5',
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-5.vue')
   },
   {
     path: '/cotizador-6',
     name: 'Cotizador-6',
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-6.vue')
   },
   {
     path: '/cotizador-7',
     name: 'Cotizador-7',
-    
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-7.vue')
   },
   {

@@ -55,6 +55,16 @@
 <script>
 export default {
   name: "Cotizador-8",
+  created() {
+    if(localStorage.getItem('LoggedEmail')){
+      localStorage.removeItem('LoggedEmail');
+      //alert("con email")
+    }else{
+      //alert("sin email")
+    }
+    this.$store.dispatch("changeModeAction", false);
+    
+  },
   methods: {
     handleToHome() {
       this.$router.push("./");

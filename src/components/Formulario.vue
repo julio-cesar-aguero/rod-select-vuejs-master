@@ -143,11 +143,12 @@ export default {
 
 <style scoped>
 #banner-principal {
-  font-weight: 200;
+  font-weight: 500;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 990px;
+  letter-spacing: 3px;
   /*background: url(../img/principal/banner_principalv3.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -240,13 +241,14 @@ input::placeholder {
 form input,
 select {
   height: 40px;
-  padding: 1em;
-  font-weight: 700;
-  border-radius: 2px;
+  padding: 1.5em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.726);
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 12px;
+  font-size: 15px;
 }
 form select {
   width: 90%;

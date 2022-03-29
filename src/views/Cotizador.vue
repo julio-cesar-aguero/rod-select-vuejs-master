@@ -52,7 +52,14 @@ export default {
     };
   },
   created() {
+    if(localStorage.getItem('LoggedEmail')){
+      localStorage.removeItem('LoggedEmail');
+      //alert("con email")
+    }else{
+      //alert("sin email")
+    }
     this.$store.dispatch("changeModeAction", false);
+    
   },
   methods: {
     validar() {
@@ -91,10 +98,7 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-body {
-  font-family: "Roboto", sans-serif;
-}
+
 .general__section {
   background-color: #f2f2f2;
   width: 100%;
@@ -111,9 +115,8 @@ h3 {
   background-color: #f2f2f2;
 }
 .cotizador__portada {
-  height: 80vh;
+  height: 50vh;
   display: grid;
-
   margin-top: 20px;
   position: relative;
   margin-bottom: 300px;
@@ -144,12 +147,13 @@ h3 {
   padding: 1em;
 }
 .emailForm input {
-  height: 40px;
+  height: 38px;
   border: none;
   margin: 0.5em;
+  text-align: center;
   border:2px solid rgba(0, 0, 0, 0.5);
-  font-size:1.25em;
-  padding:.25em .5em .3125em;
+  font-size: 1.15em;
+  padding: .35em .7em .3125em;
   color:rgba(0, 0, 0, 0.836);
   border-radius:.25em;
   background:transparent;
@@ -166,7 +170,7 @@ h3 {
 .card__information p {
   letter-spacing: 0.05em;
   font-size: 1.2em;
-  font-weight: 200;
+  font-weight: 300;
 }
 .buttons {
   padding: 1em;
@@ -187,7 +191,7 @@ h3 {
 .white-button {
   background-color: white;
   color: black;
-  padding: 0.6em 0.9em;
+  padding: 0.6em 1.2em;
   border: none;
   border-radius: 10px;
   font-weight: 800;
@@ -223,9 +227,9 @@ h3 {
     font-size: 0.8em;
   }
   .background-image {
-    max-width: 40vw;
-    max-height: 20vh;
-    transform: scale(2.8);
+    max-width: 48vw;
+    max-height: 28vh;
+    transform: scale(2.4);
   }
 }
 </style>

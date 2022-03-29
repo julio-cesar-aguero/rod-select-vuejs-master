@@ -30,6 +30,15 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  a{
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+  }
+  a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
 </style>

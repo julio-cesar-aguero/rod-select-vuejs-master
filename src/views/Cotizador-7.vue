@@ -146,7 +146,7 @@ export default {
 }
 .form__information p {
   font-size: 1em;
-  font-weight: 100;
+  font-weight: 300;
 }
 .container__form {
   width: 100%;
