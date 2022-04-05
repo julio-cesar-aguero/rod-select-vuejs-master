@@ -45,7 +45,7 @@ export default {
 
   data() {
     return {
-      email: "",
+      email: '',
       mensaje: "Ingresa un Email !",
       showMensaje: false,
       isValid: true,

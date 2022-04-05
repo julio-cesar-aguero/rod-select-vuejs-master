@@ -5,8 +5,8 @@
       <div class="form__information">
         <span>¡MUCHAS GRACIAS POR LLEGAR HASTA AQUÍ!</span>
         <p>
-          Apoyanos dejando tus datos para hacerte llegar tu cotización
-          personalizada.
+          Apoyanos dejando tus datos para hacerte llegar tu cotizacion
+          personalizada
         </p>
       </div>
 
@@ -23,7 +23,7 @@
           <label for="empresa">Empresa:</label>
           <input v-model.trim="formData.empresa" type="text" name="empresa" />
           <label for="empresa"
-            >¿Deseas agregar una personalización? Cuéntanos
+            >¿Deseas agregar una personalizacion? Cuentanos
           </label>
           <textarea
             class="boxText"
@@ -146,7 +146,7 @@ export default {
 }
 .form__information p {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 100;
 }
 .container__form {
   width: 100%;
