@@ -189,6 +189,7 @@ nav ul li {
 }
 
 .link {
+  cursor: pointer;
   font-weight: 500;
   font-size: 21px;
   color: black;

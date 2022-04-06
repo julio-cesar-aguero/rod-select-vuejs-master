@@ -6,7 +6,6 @@
           <form id="form">
             <h1>Cotiza tu proyecto con nosotros:</h1>
             <hr />
-            <h2>06 DE ABRIL GIT TRAER CAMBIOS</h2>
             <label for="nombre" class="form-label">
               <i class="fas fa-user"></i> Nombre:</label
             >
@@ -269,10 +268,15 @@ button,
 select {
   margin: 10px;
 }
+form label i{
+  color: white;
+  margin: 0.4em;
+}
 form button {
   width: 100px;
   margin: 0 auto;
 }
+
 
 .form__container {
   position: relative;
