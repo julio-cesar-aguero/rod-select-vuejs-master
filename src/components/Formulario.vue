@@ -6,6 +6,7 @@
           <form id="form">
             <h1>Cotiza tu proyecto con nosotros:</h1>
             <hr />
+            <h2>06 DE ABRIL GIT TRAER CAMBIOS</h2>
             <label for="nombre" class="form-label">
               <i class="fas fa-user"></i> Nombre:</label
             >
@@ -39,7 +40,13 @@
               id="telefono"
               placeholder="Ingresa tu teléfono de contacto"
             />
-            <select name="categoria" id="categoria" v-model="selected">
+            <label for="categoria">¿Qué te interesa?</label>
+            <select
+              class="select"
+              name="categoria"
+              id="categoria"
+              v-model="selected"
+            >
               <option value="Regalos dia de las madres">
                 Regalos corporativos día de las madres
               </option>
@@ -80,7 +87,7 @@ export default {
       formData: new Object(),
       mensaje: new String(),
       showMensaje: false,
-      selected: "",
+      selected: "Regalos dia de las madres",
     };
   },
   methods: {
@@ -95,7 +102,8 @@ export default {
       console.log(data);
       let exp = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
       let expdominio = /(gmail)|(hotmail)|(outlook)|(yahoo)/;
-      let expnumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+      let expnumber =
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
       if (expdominio.test(data.email)) {
         this.mensaje = "Ingresa un correo corporativo";
@@ -104,26 +112,26 @@ export default {
         if (!exp.test(data.email)) {
           this.mensaje = "Ingresa un correo valido";
         } else {
-          if(expnumber.test(this.formData.telefono)){
-          }else{
-          //enviarDatos(prospecto);
-          this.axios
-            //.post("/rodselect/prospecto", data)
-            .post("/rodselect/prospecto", data)
-            .then((res) => {
-              console.log(res);
-              this.mensaje =
-                " Muchas felicidades " +
-                data.email +
-                ", te haz registrado correctamente, espera a que te contactemos.";
-              this.showMensaje = true;
-              this.resetForm();
-            })
-            .catch((err) => {
-              console.log(err.response);
-              this.mensaje =
-                "Este correo ya fue registrado, espera a que te contactemos.";
-            });
+          if (expnumber.test(this.formData.telefono)) {
+          } else {
+            //enviarDatos(prospecto);
+            this.axios
+              //.post("/rodselect/prospecto", data)
+              .post("/rodselect/prospecto", data)
+              .then((res) => {
+                console.log(res);
+                this.mensaje =
+                  " Muchas felicidades " +
+                  data.email +
+                  ", te haz registrado correctamente, espera a que te contactemos.";
+                this.showMensaje = true;
+                this.resetForm();
+              })
+              .catch((err) => {
+                console.log(err.response);
+                this.mensaje =
+                  "Este correo ya fue registrado, espera a que te contactemos.";
+              });
           }
         }
       }
@@ -143,12 +151,12 @@ export default {
 
 <style scoped>
 #banner-principal {
-  font-weight: 500;
+  font-weight: 700;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 990px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   /*background: url(../img/principal/banner_principalv3.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -203,7 +211,7 @@ export default {
 #registro {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-flow: column;
   padding-top: 10px;
 }
@@ -211,14 +219,15 @@ export default {
 .formulario {
   width: 80%;
 }
-form {
+#form {
   display: flex;
   flex-flow: column;
+  justify-content: center;
   margin-top: 70px;
 }
 form label,
 form h1 {
-  font-size: 15px;
+  font-size: 17px;
   color: white;
 }
 .message__container {
@@ -235,31 +244,29 @@ hr {
   color: white;
 }
 input::placeholder {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 form input,
-select {
+form select {
+  width: 100%;
   height: 40px;
-  padding: 1.5em;
+  padding: 0.5em;
   letter-spacing: 1px;
-  font-weight: 500;
-  border-radius: 3px;
+  font-weight: 400;
+  border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.726);
   background: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 15px;
-}
-form select {
-  width: 90%;
-  margin: 1em 2em;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
 }
 form select option {
   padding: 1.5em;
 }
 label,
 input,
-button {
+button,
+select {
   margin: 10px;
 }
 form button {

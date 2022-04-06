@@ -10,7 +10,6 @@ Vue.use(VueRouter)
 function guardMyroute(to, from, next)
 {
  var isAuthenticated= false;
- console.log("chipi")
 //this is just an example. You will have to find a better or 
 // centralised way to handle you localstorage data handling 
 if(localStorage.getItem('LoggedEmail')){
@@ -24,7 +23,7 @@ if(localStorage.getItem('LoggedEmail')){
  } 
  else
  {
-  next('/'); // go to '/login';
+  next('/cotizador'); // go to '/login';
  }
 }
 
@@ -79,6 +78,7 @@ const routes = [
   {
     path: '/cotizador-8',
     name: 'Cotizador-8',
+    beforeEnter: guardMyroute,
     component: () => import('../views/Cotizador-8.vue')
   },
   {

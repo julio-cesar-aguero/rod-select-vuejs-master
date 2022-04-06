@@ -96,16 +96,19 @@ export default {
       }
     },
     register() {
-      console.log("REGISTER")
+      
             this.axios
               .post("/rodselect/nueva-cot", this.cotizacion)
               .then((res) => {
+                console.log(res)
                 this.$router.push("./Cotizador-8");
               })
               .catch((err) => {
+                console.log(err)
                 this.showMensaje = true;
                 this.mensaje =
                   "Este correo ya fue registrado, espera a que te contactemos.";
+                  
               });
     },
     submit() {
