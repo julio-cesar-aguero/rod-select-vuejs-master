@@ -163,7 +163,7 @@ h2{
   font-size: 22px;
   cursor: pointer;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   border-radius: 50%;
   transition: background 300ms;
@@ -176,8 +176,7 @@ h2{
   height: 70%;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  
+  justify-content: center;
 }
 
 nav ul,.menu-show {
@@ -189,7 +188,7 @@ nav ul,.menu-show {
 }
 nav ul li {
   font-size: 20px;
-  margin: 0px 5px;
+  padding: 0 0.3em;
   list-style: none;
 }
 
