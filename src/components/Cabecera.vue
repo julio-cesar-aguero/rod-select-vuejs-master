@@ -129,7 +129,7 @@ header {
   z-index: 100;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #f0f0f2;
   
@@ -163,7 +163,7 @@ h2{
   font-size: 22px;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 50%;
   transition: background 300ms;
@@ -172,7 +172,12 @@ h2{
 
 .container__nav {
   position: relative;
-  width: 100%;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
 }
 
 nav ul,.menu-show {
