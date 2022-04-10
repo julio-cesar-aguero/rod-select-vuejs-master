@@ -3,7 +3,7 @@
     <!-- pagina 2 -->
     <section id="cotizador-2">
       <div class="container__cotizador-2">
-        <h2>¿Cual es tu presupuesto?</h2>
+        <h2>¿Cual es tu presupuesto por pieza * ?</h2>
         <div class="cards">
           <div class="box" @click="handleOption(1)">
             <img
@@ -11,7 +11,7 @@
               src="../assets/img/icon/calculator.png"
               alt=""
             />
-            <span>MENOS DE $80,000 MXN</span>
+            <span>MENOS DE $100 MXN</span>
           </div>
           <div class="box" @click="handleOption(2)">
             <img
@@ -19,7 +19,7 @@
               src="../assets/img/icon/calculator.png"
               alt=""
             />
-            <span>DE $80,000 MXN A 150,000 MXN</span>
+            <span>DE $100 MXN A $500 MXN</span>
           </div>
           <div class="box" @click="handleOption(3)">
             <img
@@ -27,7 +27,7 @@
               src="../assets/img/icon/calculator.png"
               alt=""
             />
-            <span>DE $150,000 A 500,000 MXN</span>
+            <span>DE $501 A 5000 MXN</span>
           </div>
           <div class="box" @click="handleOption(4)">
             <img
@@ -35,7 +35,7 @@
               src="../assets/img/icon/calculator.png"
               alt=""
             />
-            <span>MÁS DE $500,000 MXN</span>
+            <span>MÁS DE $5000 MXN</span>
           </div>
         </div>
         <div class="contact__container">
@@ -43,7 +43,9 @@
           <!-- <a href="https://api.whatsapp.com/send?phone=+523318954279&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20regalos%20corporativos" target="_blank"> <i class="fab fa-whatsapp"></i> 33 1895 4279</a>-->
           <Asesor />
         </div>
+        <small>* presupuesto sin IVA</small>
       </div>
+      
     </section>
   </div>
 </template>
@@ -165,6 +167,13 @@ export default {
 .contact__container h3 {
   font-size: 1em;
   margin: 1.7em;
+}
+small{
+  margin-top: 2em;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.953);
+  font-size: 10px;
+  font-weight: 700;
 }
 /* responsive */
 @media (max-width: 1200px) {

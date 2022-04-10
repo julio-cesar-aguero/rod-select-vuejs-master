@@ -4,7 +4,8 @@
       <div id="registro">
         <div class="formulario">
           <form id="form">
-            <h1>Cotiza tu proyecto con nosotros:</h1>
+            <h1>" EXPERTOS EN REGALOS CORPORATIVOS "</h1>
+            <h2>COTIZA TU PROYECTO CON NOSOTROS:</h2>
             <hr />
             <label for="nombre" class="form-label">
               <i class="fas fa-user"></i> Nombre:</label
@@ -149,6 +150,17 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+h2{
+  margin: 0.5em;
+  text-align: center;
+  font-size: 17px;
+  color:rgb(255, 217, 134);
+}
 #banner-principal {
   font-weight: 700;
   display: flex;
@@ -156,11 +168,13 @@ export default {
   width: 100%;
   height: 990px;
   letter-spacing: 1px;
+  opacity: 0.9;
   /*background: url(../img/principal/banner_principalv3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;*/
+  
   animation: transiciones 40s infinite;
 }
 @keyframes transiciones {
@@ -205,7 +219,11 @@ export default {
 #primario {
   width: 50%;
   height: 95%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.804);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.505) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(204, 29, 29, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #registro {
   display: flex;
@@ -226,7 +244,6 @@ export default {
 }
 form label,
 form h1 {
-  font-size: 17px;
   color: white;
 }
 .message__container {

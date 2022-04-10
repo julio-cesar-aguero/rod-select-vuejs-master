@@ -134,7 +134,7 @@ header {
   background-color: #f0f0f2;
   
   color: aliceblue;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  box-shadow: rgba(0, 0, 0, 0.151) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(204, 29, 29, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   transition: cubic-bezier(0.23, 1, 0.32, 1) 300ms;

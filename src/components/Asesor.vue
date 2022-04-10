@@ -32,6 +32,8 @@ export default {
 
 <style scoped>
   a{
+    font-size: 1em;
+    font-weight: 700;
     background-color: rgba(255, 255, 255, 0.904);
     padding: 1em;
     border: none;

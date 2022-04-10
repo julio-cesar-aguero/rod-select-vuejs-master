@@ -7,22 +7,22 @@
         <div class="cards">
           <div class="box" @click="handleOption(1)">
             <img class="box-img" src="../assets/img/icon/people.png" alt="" />
-            <span>DE 1 A 10,000</span>
+            <span>DE 50 A 500</span>
           </div>
 
           <div class="box" @click="handleOption(2)">
             <img class="box-img" src="../assets/img/icon/people.png" alt="" />
-            <span>DE 10,000 A 100,000</span>
+            <span>DE 501 A 2000</span>
           </div>
 
           <div class="box" @click="handleOption(3)">
             <img class="box-img" src="../assets/img/icon/people.png" alt="" />
-            <span>DE 100,000 A 500,000</span>
+            <span>DE 2001 A 5000</span>
           </div>
 
           <div class="box" @click="handleOption(4)">
             <img class="box-img" src="../assets/img/icon/people.png" alt="" />
-            <span>MÁS DE 500,000</span>
+            <span>MÁS DE 5000</span>
           </div>
         </div>
         <div class="contact__container">
