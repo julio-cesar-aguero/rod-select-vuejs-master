@@ -74,16 +74,16 @@ export default {
     handleOption(option) {
       switch (option) {
         case 1:
-          this.dataView.cantidad = '1-80000'
+          this.dataView.cantidad = '0-100'
         break;
         case 2:
-          this.dataView.cantidad = '80000-150000'
+          this.dataView.cantidad = '100-500'
         break;
         case 3:
-          this.dataView.cantidad = '150000-500000'
+          this.dataView.cantidad = '501-5000'
         break;
         case 4:
-          this.dataView.cantidad = '500000'
+          this.dataView.cantidad = '5000-+'
         break;      
         default:
           break;

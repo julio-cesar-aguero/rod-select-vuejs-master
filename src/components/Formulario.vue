@@ -161,6 +161,11 @@ h2{
   font-size: 17px;
   color:rgb(255, 217, 134);
 }
+h1:hover,h2:hover{
+  filter: brightness(1.1);
+  transform: scale(1.1155);
+  transition: 500ms;
+}
 #banner-principal {
   font-weight: 700;
   display: flex;
@@ -224,6 +229,10 @@ h2{
   box-shadow: rgba(0, 0, 0, 0.505) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(204, 29, 29, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#primario:hover{
+  background: rgba(56, 26, 26, 0.879);
+  transition: all 600ms;
 }
 #registro {
   display: flex;

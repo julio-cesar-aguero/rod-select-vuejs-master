@@ -238,40 +238,9 @@ form {
   color: white;
   font-size: 12px;
 }
-/* 8 */
-#cotizador-8 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 3.5em;
-}
-#cotizador-8 .column__left {
+h2{
   margin: 1em;
-  padding: 1.4em;
 }
-#cotizador-8 .column__right {
-  padding: 1.4em;
-  height: 50%;
-  border-radius: 2px;
-  background-color: rgba(110, 110, 110, 0.3);
-}
-#cotizador-8 .column__left h2,
-h3 {
-  font-weight: 600;
-}
-#cotizador-8 .column__left p {
-  font-weight: 300;
-}
-
-#cotizador-6 {
-  display: flex;
-  flex-direction: column;
-}
-
-#cotizador-8 {
-  flex-direction: column;
-}
-/* responsive */
 @media (max-width: 1200px) {
   .cards {
     grid-template-columns: repeat(2, 2fr);

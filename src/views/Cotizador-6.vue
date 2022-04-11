@@ -177,7 +177,7 @@ export default {
   border-radius: 2px 80px 2px;
 }
 .box:hover {
-  transform: scale(0.8);
+  transform: scale(1.8);
 }
 .box-img {
   width: 100px;
@@ -237,7 +237,10 @@ export default {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 3fr);
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .box-child {
   text-align: center;
@@ -245,6 +248,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+}
+.box-child:hover{
+  filter: brightness(1.1);
+  transform: scale(1.1155);
+  transition: 500ms;
+  
 }
 .image-box img {
   background-color: white;
@@ -260,66 +270,6 @@ export default {
   justify-content: center;
   width: 15px;
   height: 5px;
-}
-/* 7 */
-#cotizador-7 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#cotizador-7 span {
-  font-size: 20px;
-  font-weight: 700;
-}
-#cotizador-7 p {
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-}
-.form__information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.container__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  width: 400px;
-  margin: 0 auto;
-}
-form {
-  display: flex;
-  flex-flow: column;
-  flex-direction: column;
-  justify-content: center;
-  color: black;
-  width: 400px;
-  margin: 0 auto;
-}
-.container__form form label {
-  color: black;
-  font-weight: 800;
-}
-.container__form form input {
-  height: 40px;
-  padding: 1em;
-  font-weight: 700;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.726);
-  background: rgba(228, 228, 228, 0.911);
-  color: white;
-  font-size: 12px;
-}
-/* 8 */
-
-.column__left,
-.column__right {
-  width: 50%;
 }
 /* responsive */
 @media (max-width: 1200px) {

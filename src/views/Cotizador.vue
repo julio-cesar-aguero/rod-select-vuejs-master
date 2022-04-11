@@ -98,7 +98,12 @@ export default {
 </script>
 
 <style scoped>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
+}
 .general__section {
   background-color: #f2f2f2;
   width: 100%;

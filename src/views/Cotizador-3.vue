@@ -45,7 +45,7 @@ export default {
     return {
       dataView: {
         name: 'personas',
-        personas: '1 a 10,000'
+        personas: '50-500'
       },
       option: true,
     };
@@ -54,16 +54,16 @@ export default {
    handleOption(option) {
       switch (option) {
         case 1:
-          this.dataView.cantidad = '1-10000'
+          this.dataView.cantidad = '50-500'
         break;
         case 2:
-          this.dataView.cantidad = '10000-100000'
+          this.dataView.cantidad = '501-2000'
         break;
         case 3:
-          this.dataView.cantidad = '100000-500000'
+          this.dataView.cantidad = '2001-5000'
         break;
         case 4:
-          this.dataView.cantidad = '500,000'
+          this.dataView.cantidad = '5000-+'
         break;      
         default:
           break;

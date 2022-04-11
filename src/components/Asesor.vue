@@ -1,7 +1,10 @@
 <template>
-  <a type="button" @click="mensajeW()">
+<div>
+  <a class="link" type="button" @click="mensajeW()">
     Contacta un Asesor
   </a>
+</div>
+  
 </template>
 
 <script>
@@ -31,16 +34,24 @@ export default {
 </script>
 
 <style scoped>
-  a{
+  div{
+    margin: 4em;
+  }
+  div .link{
     font-size: 1em;
     font-weight: 700;
-    background-color: rgba(255, 255, 255, 0.904);
+    background: linear-gradient(to right, rgb(202, 202, 202), rgb(153, 153, 153));
     padding: 1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: black;
+    outline: none;
+    text-decoration: none;
   }
-  a:hover{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+  div .link:hover{
+    background: linear-gradient(to right, rgb(63, 63, 63), rgb(22, 22, 22));
+    color: rgb(255, 255, 255);
+    transition: all 500ms;
   }
 </style>

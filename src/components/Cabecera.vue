@@ -122,7 +122,7 @@ body {
 header {
   font-family: "Lato", sans-serif;
   width: 100%;
-  height: 90px;
+  height: 80px;
   position: fixed;
   top: 0;
   right: 0;
@@ -137,7 +137,10 @@ header {
   box-shadow: rgba(0, 0, 0, 0.151) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(204, 29, 29, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  transition: cubic-bezier(0.23, 1, 0.32, 1) 300ms;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) 1s;
+}
+header:hover{
+    transform: scale(1.0155);
 }
 h2{
   color: red;
@@ -176,7 +179,7 @@ h2{
   height: 70%;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 nav ul,.menu-show {
@@ -212,7 +215,10 @@ nav ul li {
 @media (max-width: 1200px) {
   header {
     flex-direction: column;
-    height: 142px;
+    height: 130px;
+  }
+  .container__nav{
+    justify-content: center;
   }
   
 }
@@ -220,7 +226,7 @@ nav ul li {
   nav ul{
     margin: 0 auto;
     width: 70%;
-    padding-top: 0.7em;
+    padding-top: 0.5em;
   }
 }
 @media (max-width: 739px) {
@@ -229,6 +235,9 @@ nav ul li {
   }
   .container__logo {
     width: 100%;
+  }
+  #logorod{
+    transform: scale(0.7);
   }
   .container__menu-button {
     display: block;
@@ -247,7 +256,7 @@ nav ul li {
     height: auto;
   }
   .header-hide {
-    height: 90px;
+    height: 65px;
   }
   .ul-show {
     display: flex;
@@ -263,7 +272,7 @@ nav ul li {
 }
 @media (max-width: 430px) {
   #logorod{
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   .header-hide {
     height: 60px;

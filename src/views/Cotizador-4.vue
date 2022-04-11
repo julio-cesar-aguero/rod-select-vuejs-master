@@ -181,6 +181,9 @@ form {
   color: white;
   font-size: 12px;
 }
+h2{
+  margin: 2em;
+}
 /* responsive */
 @media (max-width: 1200px) {
   .cards {

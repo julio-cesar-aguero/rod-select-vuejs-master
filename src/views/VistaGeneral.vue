@@ -453,6 +453,8 @@ export default {
 #marcas .img-dist img {
   width: 15%;
   margin: 15px;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 #productos {
