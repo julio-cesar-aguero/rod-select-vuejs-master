@@ -18,7 +18,7 @@ Vue.component('Cabecera', Cabecera)
 Vue.component('PieDePagina', PieDePagina)
 Vue.config.productionTip = false
 
-
+//vue
 Vue.use( { router: router })
 new Vue({
   router,
