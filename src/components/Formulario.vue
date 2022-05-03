@@ -92,34 +92,42 @@ export default {
   },
   methods: {
     register() {
+      console.log("max register")
       var data = {
         date: Date.now(),
-        name: this.formData.name,
+        nombre: this.formData.name,
         email: this.formData.email,
         telefono: this.formData.telefono,
         categoria: this.selected,
       };
-      console.log(data);
       let exp = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
       let expdominio = /(gmail)|(hotmail)|(outlook)|(yahoo)/;
       let expnumber =
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
-      if (expdominio.test(data.email)) {
-        this.mensaje = "Ingresa un correo corporativo";
+      if(data.nombre ==""){
+      this.showMensaje = true;
+      this.mensaje = "Ingresa un nombre";
+      }
+      if (expdominio.test(this.formData.email)) {
         this.showMensaje = true;
+        this.mensaje = "Ingresa un correo corporativo";
       } else {
-        if (!exp.test(data.email)) {
+        if (!exp.test(this.formData.email)) {
+          this.showMensaje = true;
           this.mensaje = "Ingresa un correo valido";
         } else {
-          if (expnumber.test(this.formData.telefono)) {
+          this.showMensaje = true;
+          if (!expnumber.test(this.formData.telefono)) {
+            console.log("Ingresa un telefono valido");
+            this.mensaje = " Ingresa un telefono valido ";
+            this.showMensaje = true;
           } else {
-            //enviarDatos(prospecto);
             this.axios
-              //.post("/rodselect/prospecto", data)
               .post("/rodselect/prospecto", data)
               .then((res) => {
                 console.log(res);
+                console.log("Respuestaaaaa")
                 this.mensaje =
                   " Muchas felicidades " +
                   data.email +
@@ -128,14 +136,35 @@ export default {
                 this.resetForm();
               })
               .catch((err) => {
-                console.log(err.response);
+                console.log(err);
                 this.mensaje =
-                  "Este correo ya fue registrado, espera a que te contactemos.";
+                  "Ingrese un nombre valido";
               });
           }
         }
       }
     },
+    registro(){
+      console.log("registro",this.formData);
+       this.axios
+              .post("/rodselect/prospecto",this.formData)
+              .then((res) => {
+                console.log(res);
+                console.log("Respuestaaaaa")
+                this.mensaje =
+                  " Muchas felicidades " +
+                  data.email +
+                  ", te haz registrado correctamente, espera a que te contactemos.";
+                this.showMensaje = true;
+                this.resetForm();
+              })
+              .catch((err) => {
+                console.log(this.formData);
+                this.mensaje =
+                  "Este correo ya fue registrado, espera a que te contactemos.";
+              });
+    }
+    ,
     greet(event) {
       event.preventDefault();
       this.register();
@@ -168,62 +197,87 @@ h1:hover,h2:hover{
 }
 #banner-principal {
   font-weight: 700;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 990px;
   letter-spacing: 1px;
+  filter: brightness(1.071);
+  filter: sepia(1.65);
+  filter: opacity(82%);
   opacity: 0.9;
-  /*background: url(../img/principal/banner_principalv3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;*/
+  background-size:cover;
+  background-attachment: fixed;
+  animation: transiciones 5222222ms ease-in-out infinite forwards;
   
-  animation: transiciones 40s infinite;
 }
+
 @keyframes transiciones {
   0% {
-    background: url(../assets/img/carousel_principal/reloj_bulova.webp);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../assets/img/carousel_principal/ACTECK.webp);
     background-size: 100%;
-    background-attachment: fixed;
+    transition: 42s;
+  background-position: center;
+  background-repeat: no-repeat;
+    
   }
-  40% {
-    background: url(../assets/img/carousel_principal/1d50.webp);
-    background-position: center;
-    background-repeat: no-repeat;
+  15% {
+    background: url(../assets/img/carousel_principal/CALVIN_KLEIN.webp);
     background-size: 100%;
-    background-attachment: fixed;
+    transition: 42s;
+  background-position: center;
+  background-repeat: no-repeat;
   }
-  60% {
-    background: url(../assets/img/carousel_principal/reloj_victorinox.webp);
-    background-position: center;
-    background-repeat: no-repeat;
+  30% {
+    background: url(../assets/img/carousel_principal/CITIZEN.webp);
     background-size: 100%;
-    background-attachment: fixed;
+     background-position: center;
+  background-repeat: no-repeat;
+  transition: 42s;
   }
-  80% {
-    background: url(../assets/img/carousel_principal/setup-balamrush.webp);
-    background-position: center;
-    background-repeat: no-repeat;
+  45% {
+    background: url(../assets/img/carousel_principal/ORTIZ_ESPINOZA.webp);
     background-size: 100%;
-    background-attachment: fixed;
+    transition: 42s;
+  background-position: center;
+  background-repeat: no-repeat;
   }
 
-  100% {
-    background: url(../assets/img/carousel_principal/reloj_ck.webp);
-    background-position: center;
-    background-repeat: no-repeat;
+  60% {
+    background: url(../assets/img/carousel_principal/SHEAFFER.webp);
     background-size: 100%;
-    background-attachment: fixed;
+    transition: 42s;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+   75% {
+    background: url(../assets/img/carousel_principal/SWISSBRAND.webp);
+    background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 42s;
+  }
+   85% {
+    background: url(../assets/img/carousel_principal/UNO_DE_50.webp);
+    background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 42s;
+  }
+   100% {
+    background: url(../assets/img/carousel_principal/VICTORINOX.webp);
+    background-size: 100%;
+    background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 42s;
   }
 }
 
 #primario {
   width: 50%;
-  height: 95%;
+  height: 100%;
+  padding-bottom: 100px;
   background: rgba(0, 0, 0, 0.804);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.505) 0px 54px 55px,
@@ -317,8 +371,12 @@ form {
   left: 50%;
 }
 @media (max-width: 739px) {
+  #banner_principal{
+    height: auto;
+  }
   #primario {
     width: 100%;
+    height: auto;
   }
 }
 </style>

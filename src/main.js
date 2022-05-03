@@ -12,7 +12,7 @@ import PieDePagina from './components/PieDePagina'
 
 Vue.use(VueAxios, axios)
 //axios.defaults.baseURL = 'http://localhost:3000/api';
-axios.defaults.baseURL = 'https://sistemasrod/api';
+axios.defaults.baseURL = 'https://sistemasrod.com/api';
 
 Vue.component('Cabecera', Cabecera)
 Vue.component('PieDePagina', PieDePagina)
