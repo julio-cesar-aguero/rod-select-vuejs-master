@@ -92,7 +92,6 @@ export default {
   },
   methods: {
     register() {
-      console.log("max register")
       var data = {
         date: Date.now(),
         nombre: this.formData.name,
@@ -119,15 +118,12 @@ export default {
         } else {
           this.showMensaje = true;
           if (!expnumber.test(this.formData.telefono)) {
-            console.log("Ingresa un telefono valido");
             this.mensaje = " Ingresa un telefono valido ";
             this.showMensaje = true;
           } else {
             this.axios
               .post("/rodselect/prospecto", data)
               .then((res) => {
-                console.log(res);
-                console.log("Respuestaaaaa")
                 this.mensaje =
                   " Muchas felicidades " +
                   data.email +
@@ -143,26 +139,6 @@ export default {
           }
         }
       }
-    },
-    registro(){
-      console.log("registro",this.formData);
-       this.axios
-              .post("/rodselect/prospecto",this.formData)
-              .then((res) => {
-                console.log(res);
-                console.log("Respuestaaaaa")
-                this.mensaje =
-                  " Muchas felicidades " +
-                  data.email +
-                  ", te haz registrado correctamente, espera a que te contactemos.";
-                this.showMensaje = true;
-                this.resetForm();
-              })
-              .catch((err) => {
-                console.log(this.formData);
-                this.mensaje =
-                  "Este correo ya fue registrado, espera a que te contactemos.";
-              });
     }
     ,
     greet(event) {
@@ -208,7 +184,7 @@ h1:hover,h2:hover{
   opacity: 0.9;
   background-size:cover;
   background-attachment: fixed;
-  animation: transiciones 5222222ms ease-in-out infinite forwards;
+  animation: transiciones 522020ms ease-in-out infinite forwards;
   
 }
 
