@@ -167,9 +167,10 @@ h2{
   color:rgb(255, 217, 134);
 }
 h1:hover,h2:hover{
-  filter: brightness(1.1);
+  filter: brightness(1.12);
   transform: scale(1.1155);
-  transition: 500ms;
+  transition: 400ms;
+  animation: all;
 }
 #banner-principal {
   font-weight: 700;
@@ -251,7 +252,7 @@ h1:hover,h2:hover{
 }
 
 #primario {
-  width: 50%;
+  width: 52%;
   height: 100%;
   padding-bottom: 100px;
   background: rgba(0, 0, 0, 0.804);
@@ -261,8 +262,8 @@ h1:hover,h2:hover{
     rgba(204, 29, 29, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #primario:hover{
-  background: rgba(56, 26, 26, 0.879);
-  transition: all 600ms;
+  background: rgba(0, 0, 0, 0.979);
+  transition: all 300ms;
 }
 #registro {
   display: flex;

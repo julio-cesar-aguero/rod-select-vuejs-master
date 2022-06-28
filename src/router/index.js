@@ -82,6 +82,11 @@ const routes = [
     component: () => import('../views/Cotizador-8.vue')
   },
   {
+    path: '/terminos',
+    name: 'Terminos',
+    component: () => import('../views/Terminos.vue')
+  },
+  {
     path: '*',
     redirect:{
       path:'/'
