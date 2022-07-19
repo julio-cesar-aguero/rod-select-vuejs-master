@@ -8,7 +8,7 @@
                     <a href="mailto:marketing@rodaccesorios.com"> <i class="far fa-envelope"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=+523318954279&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20regalos%20corporativos" target="_blank"> <i class="fab fa-whatsapp"></i></a>
                 </div>
-                <a id="link-terminos" href="/terminos" target="_blank">Consulta Nuestras Politicas de Privacidad</a>
+                <router-link id="link-terminos" to="/terminos" target="_blank">Consulta Nuestras Politicas de Privacidad</router-link>
             </div>
             <div id="info">
                 <span>Rod Accesorios SAPI de C.V.</span>

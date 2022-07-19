@@ -105,7 +105,7 @@ export default {
               data.telefono = undefined;
             }
           if (!expnumber.test(this.formData.telefono) && this.formData.telefono != undefined && this.formData.telefono != '') {
-            console.log("michi",this.formData.telefono);
+            
             
             this.mensaje = " Ingresa un telefono valido ";
             this.showMensaje = true;
@@ -174,11 +174,11 @@ h2:hover {
   letter-spacing: 1px;
   filter: brightness(1.071);
   filter: sepia(1.65);
-  filter: opacity(82%);
-  opacity: 0.9;
+  filter: opacity(99%);
+  background: url(../assets/img/carousel_principal/banner-principal.webp);
   background-size: cover;
   background-attachment: fixed;
-  animation: transiciones 522020ms ease-in-out infinite forwards;
+  /*animation: transiciones 522020ms ease-in-out infinite forwards;*/
 
 }
 

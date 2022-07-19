@@ -10,6 +10,7 @@
       <PieDePagina v-show="$store.state.immersiveMode" />
     </transition>
   </div>
+  
 </template>
 
 <script>
